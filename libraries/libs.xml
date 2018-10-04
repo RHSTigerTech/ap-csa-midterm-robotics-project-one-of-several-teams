@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/RXTXcomm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/hummingbird.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/en_us.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/terk-services.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/terk-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/log4j-1.2.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/create-lab-commons-device.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/create-lab-commons-serial.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/create-lab-commons-speech.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/hummingbird-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/create-lab-commons-xml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/jna.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/create-lab-commons-usb-hid.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/create-lab-commons-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/hummingbird-applications-resources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/create-lab-commons-audio.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/cmu_us_kal.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/freetts.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/cmulex.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CommandLine/libs/jnaerator-0.9.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
