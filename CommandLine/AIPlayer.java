@@ -16,7 +16,7 @@ public class AIPlayer implements Player {
 
     @Override
     public int getNextMove(List<Integer> freeCells){
-        System.out.print("Hmm let me think...");
+        System.out.print("Hmm let me think... ");
 
         //wait half a second
         try { Thread.sleep(2000);

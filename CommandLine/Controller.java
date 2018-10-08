@@ -17,12 +17,12 @@ public class Controller {
         this.ui = ui;
         this.player1 = player1;
         this.player2 = player2;
+        player1Name = player1.getPlayerName();
+        player2Name = player2.getPlayerName();
     }
 
     public void playGame() {
         //beginning of game setup
-        player1Name = player1.getPlayerName();
-        player2Name = player2.getPlayerName();
         System.out.println("Hello " + player1Name + ", my name is " + player2Name);
 
         //wait
