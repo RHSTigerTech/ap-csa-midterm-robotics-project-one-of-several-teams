@@ -1,19 +1,11 @@
-
-import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
-
-//if we want to pause use Thread.sleep and use an exception
-public class Driver extends HummingbirdRobot {
-    //create main method
-    public static void main(String[] args) throws InterruptedException{
-        //create hummingbird object
-        HummingbirdRobot athena = new HummingbirdRobot();
-
-        /**
-         * Write code here
-         */
+public class Driver {
+    public static void main(String[] args) {
+        UserInterface ui = new UserInterface();
+        GameState game = new GameState();
 
 
-        //disconnect from robot
-        athena.disconnect();
+        //Controller controller = new Controller(new HumanPlayer(ui), new AIPlayer("AI Bob"));
+        Controller controller = new Controller(game, ui, new HumanPlayer(ui), new AIPlayer("Spooky Scary Robot", game));
+        controller.playGame();
     }
 }
