@@ -9,6 +9,10 @@ public class AIPlayer implements Player {
         this.game = game;
     }
 
+    public String setPlayerName() {
+        return "";
+    }
+
     @Override
     public String getPlayerName() {
         return name;

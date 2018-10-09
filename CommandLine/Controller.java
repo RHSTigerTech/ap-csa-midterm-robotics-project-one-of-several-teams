@@ -21,6 +21,18 @@ public class Controller {
         player2Name = player2.getPlayerName();
     }
 
+    public void setPlayer1Name() {
+        player1.setPlayerName();
+    }
+
+    public String getPlayer1Name() {
+        return player1Name;
+    }
+
+    public String getPlayer2Name() {
+        return player2Name;
+    }
+
     public void playGame() {
         //beginning of game setup
         System.out.println("Hello " + player1Name + ", my name is " + player2Name);
