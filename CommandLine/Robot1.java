@@ -3,13 +3,13 @@ import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
 
 //if we want to pause use Thread.sleep and use an exception
 public class Robot1 extends HummingbirdRobot implements Runnable{
-    HummingbirdRobot athena = new HummingbirdRobot();
+    static HummingbirdRobot athena = new HummingbirdRobot();
 
     public void run(){
-        (new Thread(new Robot1(blinkLights(1,200,200,200))).start();
+       // (new Thread(new Robot1(blinkLights(1,200,200,200))).start());
     }
 
-    public void blinkLights(int port, int red, int green, int blue){
+    public static void blinkLights(int port, int red, int green, int blue){
         for(int i = 0; i<= 50; i++){
             athena.setFullColorLED(port, red, green, blue);
 
@@ -24,11 +24,12 @@ public class Robot1 extends HummingbirdRobot implements Runnable{
             } catch (InterruptedException e){}
         }
     }
-    public void moveHead(int pos){
+    public static void moveHead(int pos){
         athena.setServoPosition(1, pos);
+
     }
 
-    public void resetHead(){
+    public static void resetHead(){
         athena.setServoPosition(1, 127);
     }
 

@@ -1,8 +1,10 @@
 
 import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
 
+import java.awt.*;
+
 //if we want to pause use Thread.sleep and use an exception
-public class RunRobot extends HummingbirdRobot implements Runnable{
+ public class RunRobot extends HummingbirdRobot implements Runnable{
     //create main method
 
 
@@ -10,14 +12,16 @@ public class RunRobot extends HummingbirdRobot implements Runnable{
         System.out.println("Hello from RunRobot!");
     }
 
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException
+    {
         //create hummingbird object
         HummingbirdRobot athena = new HummingbirdRobot();
 
-        /**
-         * Write code here
-         */
-
+        Robot1.blinkLights(1,30,50,100);
+        //try {
+            Thread.sleep(200);
+        //} catch (InterruptedException e){}
+        Robot1.moveHead(100);
 
         //disconnect from robot
         athena.disconnect();
