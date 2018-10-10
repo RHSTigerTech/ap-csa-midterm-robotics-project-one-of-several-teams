@@ -10,7 +10,7 @@ public class AIPlayer implements Player {
     }
 
     public String setPlayerName() {
-        return "";
+        return this.name;
     }
 
     @Override
@@ -22,14 +22,12 @@ public class AIPlayer implements Player {
     public int getNextMove(List<Integer> freeCells){
         System.out.print("Hmm let me think... ");
 
-        //wait half a second
-        try { Thread.sleep(2000);
-        } catch (InterruptedException e){}
+        //Robot1.blinkLights(0,0,255, 3);
 
         System.out.println("Oh! I know where to go!");
 
         //wait half a second
-        try { Thread.sleep(1000);
+        try { Thread.sleep(500);
         } catch (InterruptedException e){}
 
         int length = freeCells.size();
@@ -39,6 +37,17 @@ public class AIPlayer implements Player {
             int index = freeCells.get(i);
             boolean aiWin = game.setBoard(index, 1);
             if(aiWin) {
+                game.setBoard(index, 0);
+                return index;
+            } else
+                game.setBoard(index, 0);
+        }
+
+        //check for immediate loss
+        for(int i = 0; i < length; i++) {
+            int index = freeCells.get(i);
+            boolean userWin = game.setBoard(index, -1);
+            if(userWin) {
                 game.setBoard(index, 0);
                 return index;
             } else

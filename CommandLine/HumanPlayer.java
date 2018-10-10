@@ -22,6 +22,6 @@ public class HumanPlayer implements Player {
 
     @Override
     public int getNextMove(List<Integer> freeCells) {
-        return ui.getCell("Type the number of the cell that you want to play in", freeCells);
+        return ui.getCell("Type the number of the cell that you want to play in ", freeCells);
     }
 }

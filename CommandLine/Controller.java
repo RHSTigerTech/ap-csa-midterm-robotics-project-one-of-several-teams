@@ -33,15 +33,29 @@ public class Controller {
         return player2Name;
     }
 
+    public String getAltPlayer1Name() {
+        String altPlayer1Name = "";
+            for(int i = 0; i < player1Name.length(); i++) {
+                if(i%2 == 0) {
+                    String temp = player1Name.substring(i, i+1);
+                    altPlayer1Name += temp.toLowerCase();
+                } else {
+                    String temp = player1Name.substring(i, i+1);
+                    altPlayer1Name += temp.toUpperCase();
+                }
+            }
+        return altPlayer1Name;
+    }
+
     public void playGame() {
         //beginning of game setup
-        System.out.println("Hello " + player1Name + ", my name is " + player2Name);
+        System.out.println("Hello " + this.getAltPlayer1Name() + ", my name is " + player2Name);
 
         //wait
         try { Thread.sleep(700);
         } catch (InterruptedException e){}
 
-        System.out.println("Let's play a game. You can go first");
+        System.out.println("Let's play a game " + player1Name +". You can go first");
 
         //wait
         try { Thread.sleep(1300);
@@ -62,11 +76,14 @@ public class Controller {
             freeSpaces = game.getFreeSpace();
             System.out.println(ui.printBoard(game));
 
+            //Check for user win and for tie
             if(userWin){
                 System.out.println(player1Name + " won!");
+                //Robot1.playerWin();
                 break;
             } else if(!gameOn) {
                 System.out.println("It was a tie");
+                //Robot1.tie();
                 break;
             }
 
@@ -76,8 +93,10 @@ public class Controller {
             freeSpaces = game.getFreeSpace();
             System.out.println(ui.printBoard(game));
 
+            //check for ai win
             if(aiWin){
                 System.out.println(player2Name + " won!");
+                //Robot1.aiWin();
                 break;
             }
         }

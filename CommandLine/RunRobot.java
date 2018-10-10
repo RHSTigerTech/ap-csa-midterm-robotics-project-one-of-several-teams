@@ -9,21 +9,21 @@ import java.awt.*;
 
 
     public void run() {
-        System.out.println("Hello from RunRobot!");
+        while (true) {
+            if(Robot1.athena.getSensorValue(1) > 100) {
+                Robot1.randomLights();
+            } else
+                Robot1.lightsOff();
+        }
     }
 
     public static void main(String[] args) throws InterruptedException
     {
-        //create hummingbird object
-        HummingbirdRobot athena = new HummingbirdRobot();
-
-        Robot1.blinkLights(1,30,50,100);
-        //try {
-            Thread.sleep(200);
-        //} catch (InterruptedException e){}
-        Robot1.moveHead(100);
-
-        //disconnect from robot
-        athena.disconnect();
+        while (true) {
+            if(Robot1.athena.getSensorValue(1) > 100) {
+                Robot1.randomLights();
+            } else
+                Robot1.lightsOff();
+        }
     }
 }
