@@ -11,9 +11,7 @@ public class Driver{
     public static void main(String[] args) {
 //        try { Thread.sleep(1000);
 //        } catch (InterruptedException e){}
-        (new Thread(new RunRobot())).start();
-        try { Thread.sleep(1000);
-        } catch (InterruptedException e){}
         (new Thread(new TicTacToe())).start();
+        RunRobot.main();
     }
 }

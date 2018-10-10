@@ -9,18 +9,19 @@ import java.awt.*;
 
 
     public void run() {
-        while (true) {
-            if(Robot1.athena.getSensorValue(1) > 100) {
+        while (true) try {
+            if (Robot1.athena.getSensorValue(1) > 150) {
                 Robot1.randomLights();
             } else
                 Robot1.lightsOff();
+        } catch (UnsatisfiedLinkError e) {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException
+    public static void main()
     {
         while (true) {
-            if(Robot1.athena.getSensorValue(1) > 100) {
+            if(Robot1.athena.getSensorValue(1) > 150) {
                 Robot1.randomLights();
             } else
                 Robot1.lightsOff();

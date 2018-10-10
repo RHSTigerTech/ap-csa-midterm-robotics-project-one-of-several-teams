@@ -81,11 +81,11 @@ public class Controller {
             //Check for user win and for tie
             if(userWin){
                 System.out.println(player1Name + " won!");
-                //Robot1.playerWin();
+                Robot1.playerWin(player1Name);
                 break;
             } else if(!gameOn) {
                 System.out.println("It was a tie");
-                //Robot1.tie();
+                Robot1.tie();
                 break;
             }
 
@@ -98,7 +98,7 @@ public class Controller {
             //check for ai win
             if(aiWin){
                 System.out.println(player2Name + " won!");
-                //Robot1.aiWin();
+                Robot1.aiWin();
                 break;
             }
         }

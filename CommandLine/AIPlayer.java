@@ -22,7 +22,7 @@ public class AIPlayer implements Player {
     public int getNextMove(List<Integer> freeCells){
         System.out.print("Hmm let me think... ");
 
-        //Robot1.blinkLights(0,0,255, 3);
+        Robot1.blinkLights(0,0,255, 3);
 
         System.out.println("Oh! I know where to go!");
 

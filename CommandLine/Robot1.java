@@ -3,7 +3,7 @@ import edu.cmu.ri.createlab.hummingbird.HummingbirdRobot;
 
 //if we want to pause use Thread.sleep and use an exception
 public class Robot1 extends HummingbirdRobot{
-    static HummingbirdRobot athena = new HummingbirdRobot();
+        static HummingbirdRobot athena = new HummingbirdRobot();
 
 
 
@@ -27,6 +27,7 @@ public class Robot1 extends HummingbirdRobot{
     }
 
     public static void randomLights(){
+        athena.speak("Get out of my face homee");
         for(int i = 0; i<= 5; i++){
             int red = (int)(Math.random()*256);
             int green = (int)(Math.random()*256);
@@ -64,7 +65,7 @@ public class Robot1 extends HummingbirdRobot{
         athena.setServoPosition(1, 127);
     }
 
-    public static void playerWin() {
+    public static void playerWin(String player1Name) {
         resetHead();
         athena.speak("Oh no!");
         blinkLights(255,0,0,2);
@@ -78,6 +79,10 @@ public class Robot1 extends HummingbirdRobot{
         athena.speak("euoe");
         blinkLights(255,0,0,2);
         resetHead();
+        //wait
+        try { Thread.sleep(500);
+        } catch (InterruptedException e){}
+        athena.speak("Good game" + player1Name);
     }
 
     public static void aiWin() {
@@ -101,6 +106,9 @@ public class Robot1 extends HummingbirdRobot{
         resetHead();
         blinkLights(0,0,255,3);
         athena.speak("Ah, well");
+        //wait
+        try { Thread.sleep(500);
+        } catch (InterruptedException e){}
         moveHead(110);
         moveHead(145);
         resetHead();
