@@ -12,6 +12,7 @@ public class Controller {
     public static boolean gameOn;
 
 
+
     public Controller(GameState game, UserInterface ui, Player player1, Player player2) {
         this.game = game;
         this.ui = ui;
@@ -48,6 +49,7 @@ public class Controller {
     }
 
     public void playGame() {
+
         //beginning of game setup
         System.out.println("Hello " + this.getAltPlayer1Name() + ", my name is " + player2Name);
 
