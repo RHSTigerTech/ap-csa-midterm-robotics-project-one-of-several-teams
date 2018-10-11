@@ -27,7 +27,7 @@ public class Robot1 extends HummingbirdRobot{
     }
 
     public static void randomLights(){
-        athena.speak("Get out of my face homee");
+        athena.speak("Get out of my face homee" );
         for(int i = 0; i<= 5; i++){
             int red = (int)(Math.random()*256);
             int green = (int)(Math.random()*256);
@@ -82,12 +82,12 @@ public class Robot1 extends HummingbirdRobot{
         //wait
         try { Thread.sleep(500);
         } catch (InterruptedException e){}
-        athena.speak("Good game" + player1Name);
+        athena.speak("Good game " + player1Name);
     }
 
-    public static void aiWin() {
+    public static void aiWin(String player1Name) {
         resetHead();
-        athena.speak("WooHoo");
+        athena.speak("Woo Hoo");
         blinkLights(0,255,0,2);
         moveHead(110);
         athena.speak("hee");
@@ -100,19 +100,31 @@ public class Robot1 extends HummingbirdRobot{
         blinkLights(0,255,0,2);
         resetHead();
         athena.speak("hee");
-    }
-
-    public static void tie() {
-        resetHead();
-        blinkLights(0,0,255,3);
-        athena.speak("Ah, well");
-        //wait
         try { Thread.sleep(500);
         } catch (InterruptedException e){}
-        moveHead(110);
-        moveHead(145);
+        athena.speak("Good game " + player1Name);
+    }
+
+    public static void tie(String player1Name) {
         resetHead();
-        athena.speak("Better luck next time");
+        blinkLights(0,0,255,3);
+        athena.speak("Ah, well ");
+        //wait
+        try { Thread.sleep(300);
+        } catch (InterruptedException e){}
+        moveHead(110);
+        //wait
+        try { Thread.sleep(300);
+        } catch (InterruptedException e){}
+        moveHead(145);
+        //wait
+        try { Thread.sleep(300);
+        } catch (InterruptedException e){}
+        resetHead();
+        athena.speak(" Better luck next time");
+        try { Thread.sleep(1500);
+        } catch (InterruptedException e){}
+        athena.speak("Good game " + player1Name);
     }
 
 }

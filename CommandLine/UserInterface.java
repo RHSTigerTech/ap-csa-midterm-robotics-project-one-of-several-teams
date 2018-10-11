@@ -56,12 +56,20 @@ public class UserInterface {
                 test2[i] = " ";
         }
 
+//
+//        String result =  String.format(" %s ┃ %s ┃ %s         1 ┃ 2 ┃ 3 \n"
+//                                     + "━━━╋━━━╋━━━       ━━━╋━━━╋━━━\n"
+//                                     + " %s ┃ %s ┃ %s   <━━   4 ┃ 5 ┃ 6 \n"
+//                                     + "━━━╋━━━╋━━━       ━━━╋━━━╋━━━\n"
+//                                     + " %s ┃ %s ┃ %s         7 ┃ 8 ┃ 9 \n", test2);
 
-        String result =  String.format(" %s ┃ %s ┃ %s         1 ┃ 2 ┃ 3 \n"
-                                     + "━━━╋━━━╋━━━       ━━━╋━━━╋━━━\n"
-                                     + " %s ┃ %s ┃ %s   <━━   4 ┃ 5 ┃ 6 \n"
-                                     + "━━━╋━━━╋━━━       ━━━╋━━━╋━━━\n"
-                                     + " %s ┃ %s ┃ %s         7 ┃ 8 ┃ 9 \n", test2);
+
+        String result =  String.format(" %s | %s | %s         1 | 2 | 3 \n"
+                + "---+---+---       ---+---+---\n"
+                + " %s | %s | %s   <━━   4 | 5 | 6 \n"
+                + "---+---+---       ---+---+---\n"
+                + " %s | %s | %s         7 | 8 | 9 \n", test2);
+
 
         return result;
     }

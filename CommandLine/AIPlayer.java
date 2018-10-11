@@ -21,11 +21,11 @@ public class AIPlayer implements Player {
     @Override
     public int getNextMove(List<Integer> freeCells){
         System.out.print("Hmm let me think... ");
-
+        Robot1.athena.speak("emm let me think... ");
         Robot1.blinkLights(0,0,255, 3);
 
         System.out.println("Oh! I know where to go!");
-
+        Robot1.athena.speak("Oh! I know where to go!");
         //wait half a second
         try { Thread.sleep(500);
         } catch (InterruptedException e){}

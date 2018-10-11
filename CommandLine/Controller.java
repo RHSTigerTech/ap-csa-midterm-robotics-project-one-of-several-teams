@@ -52,13 +52,13 @@ public class Controller {
 
         //beginning of game setup
         System.out.println("Hello " + this.getAltPlayer1Name() + ", my name is " + player2Name);
-
+        Robot1.athena.speak("Hello " + this.getAltPlayer1Name() + ", my name is " + player2Name);
         //wait
-        try { Thread.sleep(700);
+        try { Thread.sleep(4200);
         } catch (InterruptedException e){}
 
-        System.out.println("Let's play a game " + player1Name +". You can go first");
-
+        System.out.println("Let's play a game. You can go first");
+        Robot1.athena.speak("Let's play a game. You can go first");
         //wait
         try { Thread.sleep(1300);
         } catch (InterruptedException e){}
@@ -85,7 +85,7 @@ public class Controller {
                 break;
             } else if(!gameOn) {
                 System.out.println("It was a tie");
-                Robot1.tie();
+                Robot1.tie(player1Name);
                 break;
             }
 
@@ -98,7 +98,7 @@ public class Controller {
             //check for ai win
             if(aiWin){
                 System.out.println(player2Name + " won!");
-                Robot1.aiWin();
+                Robot1.aiWin(player1Name);
                 break;
             }
         }
